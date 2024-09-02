@@ -29,16 +29,16 @@ b) In Routes.jsx file wrap the pages with Set, which is an import from "@redwood
         <Route path="/about" page={AboutPage} name="about" />
         <Route path="/" page={HomePage} name="home" />
       </Set>
-	  
+
 Getting data from database:
 Api:
 ----
-1) Create schema in schema.prisma file. 
+1) Create schema in schema.prisma file.
 2) yarn rw prisma migrate dev
-3) yarn rw prisma studio - To open prisma studio - http://localhost:5555 
+3) yarn rw prisma studio - To open prisma studio - http://localhost:5555
 
 yarn rw g scaffold post - To generate everything to perform CRUD(create, retrieve, update and delete) operation
-Then point it to http://localhost:8910/posts 
+Then point it to http://localhost:8910/posts
 List of tasks that happens when we expecute this command
 https://docs.redwoodjs.com/docs/tutorial/chapter2/getting-dynamic
 
@@ -61,7 +61,7 @@ yarn rw g page Article
 
 yarn rw g cell Article  - To create this cell for using in individual ArticlePage
 
-Note: In RedwoodJS, By default, any props you give to a cell will automatically be turned into variables and given to the query. 
+Note: In RedwoodJS, By default, any props you give to a cell will automatically be turned into variables and given to the query.
 
 yarn rw g component Article - To create a component
 
@@ -105,8 +105,9 @@ Then add useAuth() as shown in example
 In api\src\lib\auth.js, we need to modiy per the following:
 The getCurrentUser() function is where the magic happens: whatever is returned by this function is the content of currentUser, in both the web and api sides! In the case of dbAuth, the single argument passed in, session, contains the id of the user that's logged in. It then looks up the user in the database with Prisma, selecting just the id. Let's add email to this list.
 
-Read about session secret in Authentication tutorial when ever you want to logout all users or change/deploy to a new environment or host. 
+Read about session secret in Authentication tutorial when ever you want to logout all users or change/deploy to a new environment or host.
 
 Deployment
 ===========
 
+Lets see if this works
