@@ -118,14 +118,14 @@ export const handler = async (event, context) => {
       salt,
       userAttributes: _userAttributes,
     }) => {
-      return db.user.create({
-        data: {
-          email: username,
-          hashedPassword: hashedPassword,
-          salt: salt,
-          // name: userAttributes.name
-        },
-      })
+      // return db.user.create({
+      //   data: {
+      //     email: username,
+      //     hashedPassword: hashedPassword,
+      //     salt: salt
+      //   },
+      // })
+      return false
     },
 
     // Include any format checks for password here. Return `true` if the
